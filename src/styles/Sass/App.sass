@@ -1,0 +1,142 @@
+@import global
+
+*
+    margin: 0
+    padding: 0
+
+body
+    background: #71a5de
+    font-size: 14px
+    padding: .2rem
+    @include columnFlex
+    justify-content: center
+    align-items: stretch
+    white-space: nowrap
+    h2, span, h3
+        color: $fontColor
+        font-weight: 600
+        font-size: 1em
+button
+    @include button
+    flex: 0 1 25%
+    font-weight: 600
+    font-size: 1em
+
+.quote
+    white-space: break-spaces
+    margin: 1rem 3rem
+    font-style: italic
+    color: $fontColor
+    font-weight: 600
+    font-size: 1em
+.App
+    @include columnFlex
+    justify-content: center
+    align-items: stretch
+    gap: 3rem
+
+nav
+    @include columnFlex
+    padding: .2rem
+    gap: .2rem
+    justify-content: center
+    align-self: stretch
+
+.navBar
+    @include rowFlex
+    justify-content: space-between
+    align-items: center
+    border: 2px solid $secondarycolor
+    padding: .2rem .5rem
+    align-self: stretch
+
+    div
+        @include rowFlex
+        align-items: center
+        gap: 1rem
+
+.author
+    margin-top: .3rem
+    font-weight: 700
+    font-style: oblique
+
+.mainSect
+    @include columnFlex
+    justify-content: stretch
+    align-items: center
+    gap: 2rem
+
+.ContactComponent
+    @include columnFlex
+    justify-content: center
+    align-items: center
+    margin: 3rem
+
+#CalculatorContainer
+    margin-top: 2rem
+    width: 250px
+    height: 250px
+    @include columnFlex
+    justify-content: stretch
+    align-items: stretch
+    box-shadow: $box-shadow
+    background-color: #aecbeb
+    border-radius: 4px
+    gap: .1rem
+    padding: .3rem
+
+::placeholder
+    color: #aecbeb
+    font-weight: 600
+
+#CalcInput
+    flex: 0 1 11%
+    text-align: right
+    border-radius: 4px
+    border: none
+    background: #335c81
+    padding: .5rem
+    color: #aecbeb
+
+    &:active
+        border: none
+
+    &:focus
+        outline: 0
+
+.link
+    @include link
+    background: none !important
+
+#Btns
+    flex: 1
+    display: flex
+    flex-wrap: wrap
+
+.operator
+    background: #f5b82e !important
+
+#zero
+    flex: 0 1 50%
+
+footer
+    position: relative
+    top: auto
+    bottom: 0
+    padding: .2rem
+    border: 2px solid $secondarycolor
+    a
+        @include link
+
+@media ( min-width: 768px  )
+    body
+        font-size: 18px
+    .navBar
+        padding: .2rem 1.5rem
+
+    #CalculatorContainer
+        margin: 3rem
+
+@media (min-width: 999px)
+    body
+        font-size: 25px
