@@ -10,11 +10,9 @@ const initialState = {
 };
 
 // create a function that deals with fetching using thunk
-export const fetchApi = createAsyncThunk('users/fetchApi', async () => {
-  return await fetch(apiUrl)
-    .then((response) => response.json())
-    .catch((error) => console.log(error));
-});
+export const fetchApi = createAsyncThunk('users/fetchApi', () => fetch(apiUrl)
+  .then((response) => response.json())
+  .catch((error) => console.log(error)));
 
 export const usersSlice = createSlice({
   name: 'users',

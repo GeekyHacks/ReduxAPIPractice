@@ -1,4 +1,4 @@
-//App.js
+// App.js
 import FetchedData from './components/FetchedData';
 import './styles/Css/App.css';
 
@@ -9,7 +9,5 @@ function App() {
     </div>
   );
 }
-
-
 
 export default App;
