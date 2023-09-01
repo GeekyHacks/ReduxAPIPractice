@@ -4,8 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchApi } from '../redux/users/usersSlice';
 
 const FetchedData = () => {
-  // const users = useSelector((state) => state.users.users);
-  // const isLoading = useSelector((state) => state.users.isLoading);
 
   const { users, isLoading, error } = useSelector((store) => store.users);
   const dispatch = useDispatch();
